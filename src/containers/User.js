@@ -34,63 +34,59 @@ export class User extends React.Component {
     render() {
         const steps =
             [
-                {name: 'SIMULE', component: <Step1/>},
+                { name: 'SIMULE', component: <Step1/>},
                 { name: 'PREENCHA O CADASTRO',component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
                 { name: 'REVISE SEU PEDIDO', component: <Step1/>},
                 { name: 'FINALIZE O PEDIDO', component: <Step1/>}
 
             ]
        return (
-            <div className="preview__header" style={{background:'#313031'}}>
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="preview__block" style={{marginLeft:'15%'}}>
-                            <div>
-                                <label className="preview__title">ME CHAMO:</label>
-                            </div>
-                            <div>
-                                <label className="preview__object ">{this.state.name}</label>
-                            </div>
-                            <div>
-                                <label className="preview__title">CPF:</label>
-                                <label className="preview__title" style={{color:'#fff'}}>{this.state.phone}</label>
-                            </div>
+            <div className="preview__header">
+                <div className="row" style={{background:'#313031',padding:'0px 0px 0px 30px'}} >
+                    <div className="col-md-2" ></div>
+                    <div className="col-md-2">
+                        <div>
+                            <label className="preview__title">ME CHAMO:</label>
                         </div>
-                        <span className="preview__space_first " ></span>
-                        <div className="preview__block">
-                            <div>
-                                <label className="preview__title">PRECISO DE:</label>
-                            </div>
-                            <div>
-                                <label className="preview__object">R$: </label>
-                                <label className="preview__object ">{this.state.price}</label>
-                            </div>
+                        <div>
+                            <label className="preview__object ">{this.state.name}</label>
                         </div>
-                        <span className="preview__space "></span>
-                        <div className="preview__block">
-                            <div>
-                                <label className="preview__title">QUERO PAGAR EM:</label>
-                            </div>
-                            <div>
-                                <label className="preview__object ">{this.state.qty}</label>
-                                <label className="preview__object"> VEZES</label>
-                            </div>
+                        <label className="preview__title">CPF:</label>
+                        <label className="preview__title" style={{color:'#fff'}}>{this.state.phone}</label>
+                    </div>
+                    <div className="col-md-2">
+                        <div>
+                            <label className="preview__title">PRECISO DE:</label>
                         </div>
-                        <span className="preview__space "></span>
-                        <div className="preview__block">
-                            <div>
-                                <label className="preview__title">PARA:</label>
-                            </div>
-                            <div>
-                                <label className="preview__object ">{this.state.purpose}</label>
-                            </div>
+                        <div>
+                            <label className="preview__object">R$: </label>
+                            <label className="preview__object ">{this.state.price}</label>
                         </div>
                     </div>
+                    <div className="col-md-2">
+                        <div>
+                            <label className="preview__title">QUERO PAGAR EM:</label>
+                        </div>
+                        <div>
+                            <label className="preview__object ">{this.state.qty}</label>
+                            <label className="preview__object"> VEZES</label>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <div>
+                            <label className="preview__title">PARA:</label>
+                        </div>
+                        <div>
+                            <label className="preview__object ">{this.state.purpose}</label>
+                        </div>
+                    </div>
+                    <div className="col-md-2"></div>
                 </div>
-                <div className="row">
-                    <div className="col-md-12" style={{marginLeft:'25%'}}>
-                            <StepZilla steps={steps} stepsNavigation={true} showNavigation={false} startAtStep={1} />
+                <div className="row" >
+                   <div className="col-md-12">
+                        <StepZilla steps={steps} stepsNavigation={true} showNavigation={false} startAtStep={1} />
                     </div>
+
                 </div>
             </div>
         )
