@@ -1,18 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {  FormGroup} from 'react-bootstrap';
+
 
 //import ServerNotifications from "../components/ServerNotifications/ServerNotifications";
 
 export const Header = () => {
     return (
-        <div className="preview__header">
+        <FormGroup className="preview__header">
 
-            <div className="preview__logo">
+            <FormGroup className="preview__logo">
                 <img src="assets/logo/logo_geru.png"/>
-            </div>
+            </FormGroup>
 
-            <div className="preview__actions">
-                <div className="preview__action">
+            <FormGroup className="preview__actions">
+                <FormGroup className="preview__action">
                     <a href="">
                         <i className="e-icon "></i>
                         <span>COMO FUNCIONA</span>
@@ -23,9 +24,9 @@ export const Header = () => {
                     <a href="">
                         <i className="e-icon "></i><span>AJUDA</span>
                     </a>
-                </div>
-            </div>
+                </FormGroup>
+            </FormGroup>
 
-        </div>
+        </FormGroup>
     )
 };
