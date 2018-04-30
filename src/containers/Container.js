@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import {PaymentFormPage} from "../routes/contact/PaymentFormPage";
+
 
 
 

@@ -21,10 +21,10 @@ export function ActionRequest(url, method = METHODS.GET, then, sendData) {
         case METHODS.UPLOAD: {
             data = uploadRequest(url, then, sendData);
             break;
-        }
-        default: {
-            data = getRequest(url, then);
         }*/
+        default: {
+            /*data = getRequest(url, then);*/
+        }
     }
     return data;
 }

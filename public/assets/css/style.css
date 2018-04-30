@@ -2,7 +2,6 @@
   height:100%
 ;padding:0px;
   margin:0px;
-  overflow:hidden
 }
 
 .full-screen-preview__frame{
@@ -20,6 +19,28 @@
   height:80px;
   background-color:#000;
   z-index:100;
+  margin-bottom: 0px !important;
+}
+
+.preview__container{
+  padding:0px !important;
+  margin: 0px !important;
+}
+
+.preview_row div{
+  padding:0px !important;
+  margin: 0px !important;
+  line-height: 0px;
+}
+
+.preview_row div label{
+  margin-bottom: 1.1rem;
+}
+
+.preview_row
+{
+  line-height: 0px!important;
+  padding: 15px;
 }
 
 .preview__step{
@@ -60,7 +81,7 @@
 
 .preview__title_contact {
   font-size: 8px;
-  margin:  0px 0px 0px 18px;
+  margin:  0px 0px 0px 0px;
   color: #000;
 }
 
@@ -109,18 +130,18 @@
   display: flex;
 }
 
-.preview__block_focus{
-  border:1px solid #2cacff;
+.preview__block_focus input-group select{
+  border:1px solid #2cacff !important;
 }
 
-.preview__block_error{
-   border:1px solid #ff1d11;
+.preview__block_error input-group select{
+   border:1px solid #ff1d11 !important;
  }
 
-.preview__block_normal{
-  border:1px solid black;
-  border-radius: 0px;
-  height: 22px;
+.preview__block_normal input-group select{
+  border:1px solid black !important;
+  border-radius: 0px !important;
+  height: 22px !important;
 }
 
 .preview__space {
@@ -150,6 +171,18 @@
 
 @media (max-width: 568px){
   .preview__logo{padding:0 10px
+  }
+
+  .preview__object {
+    font-size: 20px;
+    margin-right: 0px;
+    color: #fff;
+
+  }
+  .preview_row
+  {
+    padding-left: 25px!important;
+    display: block!important;
   }
 
   .preview__logo a{
@@ -195,7 +228,11 @@
   .preview__action--buy{
     padding:0 10px
   }
+  .preview_row
+  {
+    padding:0px 0px 0px 10px;
 
+  }
 }
 
 
@@ -235,16 +272,14 @@
   .progtrckr li span {
     display: none;
   }
-  .preview__block div
-  {
+  .preview__block_normal{
     display: block;
   }
 
 }
 
 @media (max-width: 568px){
-  .preview__block div
-  {
+  .preview__block_normal{
     display: block;
   }
   .preview__action a span{

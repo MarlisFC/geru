@@ -9,7 +9,7 @@ export const Header = () => {
         <FormGroup className="preview__header">
 
             <FormGroup className="preview__logo">
-                <img src="assets/logo/logo_geru.png"/>
+                <img src="assets/logo/logo_geru.png" alt="GERU"/>
             </FormGroup>
 
             <FormGroup className="preview__actions">
