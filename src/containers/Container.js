@@ -1,16 +1,15 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
-
-
-
+import {Switch,Route} from 'react-router-dom'
+import ContactList from "../routes/contact/subviews/ContactList";
+import {User} from "./User";
 
 export class Container extends React.Component {
     render() {
         return (
             <div>
-                <Message/>
                 <Switch>
-                    <Route exact path="/payments/new" name="Payments List" component={PaymentFormPage}/>
+                    <Route exact path="/" name="User" component={User}/>
+                    <Route exact path="/contact_list/" name="Contact List" component={ContactList}/>
                 </Switch>
             </div>
         )

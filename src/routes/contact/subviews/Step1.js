@@ -9,8 +9,6 @@ export const Step1= () => {
     return (
         <div >
 
-
-
         </div>
     )
 };

@@ -3,6 +3,8 @@ import StepZilla from 'react-stepzilla'
 import Step2 from "../routes/contact/subviews/Step2";
 import {Step1} from "../routes/contact/subviews/Step1";
 import {  FormGroup,Row,Col, ControlLabel,Grid} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -41,6 +43,7 @@ export class User extends React.Component {
 
             ]
         return (
+
             <Grid className="preview__container" style={{maxWidth:'100%'}}>
                 <FormGroup style={{background:'#313031',marginBottom:'0px'}}>
                     <Row  className="preview_row" >
@@ -72,12 +75,19 @@ export class User extends React.Component {
                                 <ControlLabel className="preview__object"> VEZES</ControlLabel>
                             </FormGroup>
                         </Col>
-                        <Col md={3}  sm={2} >
+                        <Col md={4}  sm={2} >
                             <FormGroup>
                                 <ControlLabel className="preview__title">PARA:</ControlLabel>
                             </FormGroup>
                             <FormGroup>
                                 <ControlLabel className="preview__object ">{this.state.purpose}</ControlLabel>
+                            </FormGroup>
+                        </Col>
+                        <Col md={2}  sm={1}>
+                            <FormGroup className="preview__action" style={{fontSize: '12px'}}>
+                                <Link to={`/contact_list/`}>
+                                    <div className="name"> VEJA TODOS OS DADOS</div>
+                                </Link>
                             </FormGroup>
                         </Col>
                     </Row>
@@ -89,7 +99,6 @@ export class User extends React.Component {
                     </Row>
                 </FormGroup>
             </Grid>
-
         )
     }
 

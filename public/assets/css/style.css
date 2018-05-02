@@ -255,6 +255,25 @@
   display: inline-block
 
 }
+.preview__action__ a{
+  color: #575757;
+  text-decoration:none
+}
+
+.preview__action__ a:hover{
+  color: #000000
+}
+
+.preview__action__ a i{
+  color: #0D8B9A;
+  font-size:0px;
+  margin-right:10px;
+  margin-left: 10px;
+  border-style: solid;
+  -webkit-border-radius: 2px;
+  display: inline-block
+
+}
 .preview__label{
   width: 10px;
   background: #000;

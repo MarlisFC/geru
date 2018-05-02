@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import MaskedTextInput from 'react-text-mask';
 import 'jquery/dist/jquery';
 import {ReBootSelect} from "../../../utils/ReBootSelect";
-import {Link} from 'react-router-dom'
 
 class Step2 extends React.Component {
     constructor(props){
@@ -159,11 +158,10 @@ class Step2 extends React.Component {
     render(){const CONTACT_FORM  =(<div> <ToastContainer autoClose={5000} />
 
         <FormGroup style={{background:'#fff'}}>
-            <Row >
-                <Col  md={12}  sm={1} style={{textAlign:'center'}}>
+            <Row>
+                <Col  md={10}  sm={1} style={{textAlign:'center'}}>
                     <FormGroup className="preview__title_label" style={{paddingTop:'30px'}}>
                         <ControlLabel >DADOS PESSOAIS</ControlLabel>
-
                     </FormGroup>
                 </Col>
             </Row>

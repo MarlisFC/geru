@@ -9,7 +9,7 @@ export function ActionRequest(url, method = METHODS.GET, then, sendData) {
         case METHODS.POST:
             data = postRequest(url, then, sendData);
             break;
-        /*case METHODS.PUT:
+        case METHODS.PUT:
             data = putRequest(url, then, sendData);
             break;
         case METHODS.DELETE:
@@ -17,7 +17,7 @@ export function ActionRequest(url, method = METHODS.GET, then, sendData) {
             break;
         case METHODS.GET:
             data = getRequest(url, then);
-            break;
+            break;/*
         case METHODS.UPLOAD: {
             data = uploadRequest(url, then, sendData);
             break;
@@ -43,6 +43,33 @@ function postRequest(url, afterFunction, data) {
     }).catch(handleCatch);
 }
 
+function getRequest(url, afterFunction) {
+   return axios.get(url).then((res) => {
+        let data = res.data;
+        if (afterFunction) {
+            const data = (res.data._embedded) ? res.data._embedded : res.data;
+            const page = (res.data.page) ? res.data.page : [];
+            afterFunction({data: data, page: page});
+        }
+        return data;
+    }).catch(handleCatch);
+
+}
+
+function putRequest(url, afterFunction, data) {
+    return axios.put(url, data).then((res) => {
+        if (afterFunction) {
+            afterFunction(res.data);
+        }
+    }).catch(handleCatch);
+}
+function deleteRequest(url, afterFunction) {
+    return axios.delete(url).then(res => {
+        if (afterFunction) {
+            afterFunction(res.data);
+        }
+    }).catch(handleCatch);
+}
 
 
 function handleCatch(error) {

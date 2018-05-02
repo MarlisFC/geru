@@ -15,7 +15,7 @@ export const Header = () => {
             <FormGroup className="preview__actions">
                 <FormGroup className="preview__action">
                     <a href="">
-                        <i className="e-icon "></i>
+                        <i className="e-icon"></i>
                         <span>COMO FUNCIONA</span>
                     </a>
                     <a href="">
